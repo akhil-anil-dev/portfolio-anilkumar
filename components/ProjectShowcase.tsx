@@ -71,7 +71,7 @@ export default function ProjectShowcase() {
         className="absolute inset-0 -z-10 blueprint-grid opacity-50"
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="container-page grid grid-cols-1 gap-2 py-3 sm:grid-cols-2 sm:gap-3 lg:grid-cols-5 lg:py-4">
         {categories.map((c, i) => {
           const hasPhoto = existsSync(
             path.join(process.cwd(), "public", c.photo)
@@ -99,10 +99,10 @@ function ShowcaseTile({
   const { icon: Icon, label, photo, accent, description, highlight } = category;
 
   return (
-    <article className="group relative flex h-full flex-col border-b border-white/10 sm:[&:nth-child(odd)]:border-r lg:border-b-0 lg:[&:not(:last-child)]:border-r">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-md border border-white/10 bg-navy-900/30">
       {/* Top label badge — fixed height so all 5 tiles stay aligned */}
-      <div className="flex h-11 flex-none items-center justify-between gap-2 border-b border-white/10 bg-navy-900/40 px-4">
-        <p className="truncate whitespace-nowrap font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
+      <div className="flex h-10 flex-none items-center justify-between gap-2 border-b border-white/10 bg-navy-900/50 px-3">
+        <p className="truncate whitespace-nowrap font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
           {label}
         </p>
         <span className="flex-none font-mono text-[9px] uppercase tracking-[0.18em] text-white/40">
@@ -112,7 +112,7 @@ function ShowcaseTile({
 
       {/* Visual tile */}
       <div
-        className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${accent}`}
+        className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${accent}`}
       >
         {hasPhoto ? (
           <img

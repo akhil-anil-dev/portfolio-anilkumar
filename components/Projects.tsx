@@ -145,7 +145,7 @@ function FeaturedCard({
           />
           <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-navy-100 bg-white/95 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-navy-700 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Featured · Current
+            Featured
           </span>
         </div>
 
