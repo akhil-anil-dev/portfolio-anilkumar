@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    @apply bg-white text-ink-800 antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    @apply bg-accent/25 text-navy-700;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Blueprint grid for hero / project placeholders. */
+  .blueprint-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .blueprint-grid-light {
+    background-image:
+      linear-gradient(rgba(11, 22, 51, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11, 22, 51, 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-navy-600 px-5 py-3
+           text-sm font-semibold text-white shadow-soft transition
+           hover:-translate-y-0.5 hover:bg-navy-700 hover:shadow-card
+           active:translate-y-0;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3
+           text-sm font-semibold text-white shadow-soft transition
+           hover:-translate-y-0.5 hover:bg-accent-700 hover:shadow-card
+           active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-navy-600
+           bg-white px-5 py-3 text-sm font-semibold text-navy-600 transition
+           hover:-translate-y-0.5 hover:bg-navy-600 hover:text-white
+           active:translate-y-0;
+  }
+
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/20
+           bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white backdrop-blur
+           transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/[0.08]
+           active:translate-y-0;
+  }
+
+  /* Cards */
+  .card {
+    @apply relative rounded-2xl border border-ink-300 bg-white shadow-soft
+           transition-all duration-300 hover:-translate-y-0.5 hover:border-navy-200 hover:shadow-card;
+  }
+
+  /* Chips */
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-navy-200/60
+           bg-navy-50 px-3 py-1 text-xs font-medium text-navy-700;
+  }
+
+  .chip-dark {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/15
+           bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-white/90 backdrop-blur;
+  }
+
+  /* Section titling */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase
+           tracking-[0.22em] text-accent-600;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-8 bg-accent;
+  }
+
+  .eyebrow-dark {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase
+           tracking-[0.22em] text-accent-300;
+  }
+  .eyebrow-dark::before {
+    content: "";
+    @apply block h-px w-8 bg-accent-400;
+  }
+
+  .section-title {
+    @apply font-display text-4xl font-extrabold tracking-tight text-navy-700 sm:text-5xl;
+  }
+
+  .section-title-light {
+    @apply font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl;
+  }
+}
+
+@layer utilities {
+  /* Reveal — fade-up triggered by IntersectionObserver via <Reveal /> */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Angled photo frame — diagonal cut on the left edge (Hero portrait). */
+  .photo-clip {
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
+  }
+
+  /* Soft architectural line-art backdrop. */
+  .arch-lines {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600' fill='none' stroke='%231B3268' stroke-opacity='0.08' stroke-width='1'><path d='M0 540 L240 280 L420 380 L640 180 L800 280 L800 540 Z'/><path d='M240 280 L240 540 M340 320 L340 540 M420 380 L420 540 M520 320 L520 540 M640 180 L640 540 M720 240 L720 540'/><path d='M260 320 L320 320 M260 380 L320 380 M260 440 L320 440 M260 500 L320 500'/><path d='M440 420 L500 420 M440 470 L500 470 M440 520 L500 520'/><path d='M660 220 L720 220 M660 280 L720 280 M660 340 L720 340 M660 400 L720 400 M660 460 L720 460'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .animate-fade-up,
+    .animate-fade-in,
+    .animate-marquee {
+      animation: none !important;
+    }
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
