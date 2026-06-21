@@ -313,13 +313,32 @@ export const projects: Project[] = [
 ];
 
 /* ─────────── Certifications ─────────── */
-/** TODO: replace with real certifications when provided. */
-export const certifications: { name: string; issuer?: string; year?: string }[] =
-  [
-    { name: "Autodesk Revit MEP — Coordination", issuer: "TODO", year: "TODO" },
-    { name: "Navisworks Manage — Clash Detection", issuer: "TODO", year: "TODO" },
-    { name: "AutoCAD Professional", issuer: "TODO", year: "TODO" },
-  ];
+export const certifications: {
+  name: string;
+  issuer?: string;
+  year?: string;
+  /** Filename inside /public/certifications/ — renders a "View Certificate" link. */
+  file?: string;
+}[] = [
+  {
+    name: "Revit MEP Advanced Workshop (Revit MEP 2024)",
+    issuer: "Autodesk Authorized Training Center · Symetri",
+    year: "2025",
+    file: "revit-mep-advanced.pdf",
+  },
+  {
+    name: "Certified ISO 19650 Information Manager — Level 3 Expert",
+    issuer: "Plannerly",
+    year: "2025",
+    file: "plannerly-iso19650-expert.pdf",
+  },
+  {
+    name: "Certified Information Manager — Level 1 Basics",
+    issuer: "Plannerly",
+    year: "2025",
+    file: "plannerly-cim-basics.pdf",
+  },
+];
 
 /* ─────────── Education ─────────── */
 /** TODO: replace with real education history. */

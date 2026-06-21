@@ -1,4 +1,4 @@
-import { Award, GraduationCap } from "lucide-react";
+import { ArrowUpRight, Award, GraduationCap } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import { certifications, education } from "@/lib/data";
@@ -21,13 +21,24 @@ export default function Certifications() {
                   <div className="grid h-11 w-11 flex-none place-items-center rounded-xl bg-accent/10 text-accent-600">
                     <Award size={20} />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <p className="font-medium text-navy-700">{c.name}</p>
                     <p className="mt-0.5 text-sm text-ink-600">
                       {c.issuer && <span>{c.issuer}</span>}
                       {c.issuer && c.year && <span> · </span>}
                       {c.year && <span>{c.year}</span>}
                     </p>
+                    {c.file && (
+                      <a
+                        href={`/certifications/${c.file}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-accent-600 transition hover:text-accent-700"
+                      >
+                        View Certificate
+                        <ArrowUpRight size={12} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </Reveal>
