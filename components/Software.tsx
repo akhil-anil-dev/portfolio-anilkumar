@@ -1,5 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
+import SoftwareLogo from "./SoftwareLogo";
 import { software } from "@/lib/data";
 
 const levelStyles: Record<string, string> = {
@@ -7,34 +8,6 @@ const levelStyles: Record<string, string> = {
   Advanced: "bg-accent/15 text-accent-700",
   Proficient: "bg-navy-50 text-navy-700",
 };
-
-// Brand colour for each tool — matches the Hero software-icon row.
-const brandClass: Record<string, string> = {
-  "Autodesk Revit": "bg-brand-revit",
-  "Navisworks Manage": "bg-brand-navisworks",
-  Dynamo: "bg-brand-dynamo",
-  AutoCAD: "bg-brand-autocad",
-  "BIM 360 / ACC": "bg-brand-bim360",
-  "Carrier HAP": "bg-navy-600",
-};
-
-function ToolMark({ name }: { name: string }) {
-  const initials = name
-    .replace(/[^a-zA-Z\s]/g, "")
-    .split(/\s+/)
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-  const bg = brandClass[name] ?? "bg-navy-600";
-  return (
-    <span
-      className={`grid h-14 w-14 flex-none place-items-center rounded-xl ${bg} font-display text-xl font-extrabold text-white shadow-soft`}
-    >
-      {initials}
-    </span>
-  );
-}
 
 export default function Software() {
   return (
@@ -52,7 +25,11 @@ export default function Software() {
           {software.map((s, i) => (
             <Reveal key={s.name} delay={i * 60}>
               <div className="card flex h-full items-start gap-4 p-6">
-                <ToolMark name={s.name} />
+                <SoftwareLogo
+                  name={s.name}
+                  size={56}
+                  className="rounded-xl shadow-soft"
+                />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="text-base font-semibold text-navy-700">

@@ -3,13 +3,14 @@
 import { useState } from "react";
 import { ArrowRight, Download, HardHat, MapPin, User } from "lucide-react";
 import { profile } from "@/lib/data";
+import SoftwareLogo from "./SoftwareLogo";
 
 const softwareIcons = [
-  { name: "Revit", letter: "R", bg: "bg-brand-revit" },
-  { name: "AutoCAD", letter: "A", bg: "bg-brand-autocad" },
-  { name: "Navisworks", letter: "N", bg: "bg-brand-navisworks" },
-  { name: "Dynamo", letter: "D", bg: "bg-brand-dynamo" },
-  { name: "BIM 360 / ACC", letter: "B", bg: "bg-brand-bim360" },
+  "Revit",
+  "AutoCAD",
+  "Navisworks",
+  "Dynamo",
+  "BIM 360 / ACC",
 ];
 
 // Sharper trapezoid — diagonal cut from 28% across the top down to 32% of the height on the left.
@@ -70,16 +71,15 @@ export default function Hero() {
               Software Proficiency
             </p>
             <ul className="mt-3 flex flex-wrap items-end gap-3">
-              {softwareIcons.map((s) => (
-                <li key={s.name} className="flex flex-col items-center gap-1">
-                  <span
-                    className={`grid h-11 w-11 place-items-center rounded-lg ${s.bg} font-display text-lg font-extrabold text-white shadow-soft`}
-                    aria-hidden
-                  >
-                    {s.letter}
-                  </span>
+              {softwareIcons.map((name) => (
+                <li key={name} className="flex flex-col items-center gap-1.5">
+                  <SoftwareLogo
+                    name={name}
+                    size={44}
+                    className="rounded-lg shadow-soft"
+                  />
                   <span className="text-[10px] font-medium text-ink-700">
-                    {s.name}
+                    {name === "BIM 360 / ACC" ? "BIM 360 / ACC" : name}
                   </span>
                 </li>
               ))}

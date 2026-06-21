@@ -27,30 +27,35 @@ export const profile = {
 };
 
 /* ─────────── Core / Soft Skills ─────────── */
-/** Source PDF showed star ratings without labels — replace these with the actual list. */
 export const coreSkills: { name: string; level: number }[] = [
-  { name: "MEP Coordination", level: 5 },
+  { name: "MEP BIM Coordination", level: 5 },
   { name: "Clash Detection & Resolution", level: 5 },
-  { name: "BIM Modeling (LOD 300–500)", level: 5 },
-  { name: "Team Collaboration", level: 5 },
-  { name: "Problem Solving", level: 4 },
-  { name: "Communication", level: 4 },
-  { name: "Attention to Detail", level: 5 },
-  { name: "Time Management", level: 4 },
+  { name: "BIM Model Management", level: 5 },
+  { name: "Multidisciplinary Coordination", level: 5 },
+  { name: "Shop Drawing Production", level: 5 },
+  { name: "BIM Standards & QA/QC", level: 5 },
+  { name: "RFI Management", level: 4 },
+  { name: "Construction Documentation", level: 5 },
 ];
 
 /* ─────────── Technical Skills ─────────── */
 export const technicalSkills: string[] = [
-  "Mechanical Systems Modeling",
-  "Electrical Systems Modeling",
-  "Plumbing & Firefighting",
-  "HVAC Layout & Ductwork",
-  "Pump Room Design",
-  "Quantity Estimation",
-  "MEP Drawings & Documentation",
-  "IFA / IFC / As-Built Stages",
-  "Clash Detection & Coordination",
-  "Multi-Discipline Reviews",
+  "BIM Modeling (MEP)",
+  "Revit MEP & Family Management",
+  "BIM Model Management",
+  "Template Creation & Project Setup",
+  "Clash Detection & Resolution",
+  "Multidisciplinary Coordination",
+  "Shop Drawings & Construction Documentation",
+  "BIM 360 / Autodesk Construction Cloud (ACC)",
+  "Dynamo Automation",
+  "HVAC, Plumbing & Firefighting Modeling",
+  "Quantity Take-Off (QTO)",
+  "IFC / IFA / As-Built Deliverables",
+  "Model QA/QC & BIM Standards",
+  "Coordination Meetings & RFI Management",
+  "Technical Problem Solving & Coordination Solutions",
+  "Team Leadership & Resource Coordination",
 ];
 
 /* ─────────── Software ─────────── */

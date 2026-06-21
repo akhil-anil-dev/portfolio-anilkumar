@@ -30,8 +30,8 @@ export default function About() {
         <Reveal>
           <SectionHeading
             eyebrow="About"
-            title="Building precision into every system."
-            description="I'm a BIM coordinator focused on the mechanical, electrical, and plumbing layer of modern construction. From boutique hotels in Malta to towers in Riyadh and Doha, I bring models, drawings, and teams into alignment — so the building gets built, on paper and on site."
+            title="Driving excellence through precision BIM coordination."
+            description="I'm an accomplished MEP BIM Coordinator with extensive experience delivering high-impact BIM solutions across residential, commercial, hospitality, and mixed-use developments. Having successfully contributed to projects ranging from luxury residential villas to large-scale developments across the Gulf region, India, and Europe, I bring deep expertise in BIM coordination, multidisciplinary clash detection and resolution, construction-ready documentation, stakeholder communication, and team leadership. My focus is on optimizing project delivery through efficient, coordinated, and buildable solutions that support successful construction outcomes at scale."
           />
         </Reveal>
 
