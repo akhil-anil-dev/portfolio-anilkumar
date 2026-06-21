@@ -30,7 +30,6 @@ export default function PhotoCarousel({
   alt = "",
 }: Props) {
   const [index, setIndex] = useState(0);
-  const [loaded, setLoaded] = useState<Record<string, boolean>>({});
   const [failed, setFailed] = useState<Record<string, boolean>>({});
   const valid = photos.filter((p) => !failed[p]);
 
@@ -65,11 +64,13 @@ export default function PhotoCarousel({
           key={p}
           src={p}
           alt={alt}
+          // First photo eager so it's prefetched + decoded ASAP; rest lazy.
           loading={i === 0 ? "eager" : "lazy"}
-          onLoad={() => setLoaded((l) => ({ ...l, [p]: true }))}
+          decoding={i === 0 ? "sync" : "async"}
+          fetchPriority={i === 0 ? "high" : "auto"}
           onError={() => setFailed((f) => ({ ...f, [p]: true }))}
-          className={`absolute inset-0 h-full w-full ${fit} transition-opacity duration-1000 ease-in-out ${
-            valid[index] === p && loaded[p] ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 h-full w-full ${fit} transition-opacity duration-500 ease-in-out ${
+            valid[index] === p ? "opacity-100" : "opacity-0"
           }`}
         />
       ))}

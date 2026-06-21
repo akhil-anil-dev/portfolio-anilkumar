@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden bg-white pt-24 sm:pt-28"
+      className="relative isolate overflow-hidden bg-white pt-20 sm:pt-24"
     >
       {/* 3D building wireframe — sits in the upper-right of the LEFT column, behind the text */}
       <BuildingWireframe />
@@ -34,48 +34,48 @@ export default function Hero() {
             Portfolio
           </p>
 
-          <h1 className="mt-3 whitespace-nowrap font-display text-[2.5rem] font-extrabold leading-[0.95] tracking-tightest text-navy-700 sm:text-[3.5rem] lg:text-[4.5rem]">
-            ANILKUMAR N J
+          <h1 className="mt-2 whitespace-nowrap font-display text-[2.5rem] font-extrabold leading-[0.95] tracking-tightest text-navy-700 sm:text-[3.25rem] lg:text-[4.25rem]">
+            ANILKUMAR N.J.
           </h1>
 
-          <div className="mt-4 h-1 w-20 rounded-full bg-accent" />
+          <div className="mt-3 h-1 w-20 rounded-full bg-accent" />
 
-          <p className="mt-4 font-display text-lg font-bold tracking-wide text-navy-700 sm:text-xl">
+          <p className="mt-3 font-display text-base font-bold tracking-wide text-navy-700 sm:text-lg">
             MEP BIM COORDINATOR
           </p>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-700 sm:text-[15px]">
+          <p className="mt-2 max-w-xl text-sm leading-snug text-ink-700 sm:text-[15px]">
             {profile.summary}
           </p>
 
-          <div className="mt-5 inline-flex items-center gap-3 rounded-xl border border-navy-100 bg-white/85 px-3 py-2.5 backdrop-blur">
-            <div className="grid h-10 w-10 flex-none place-items-center rounded-full bg-navy-700 text-white shadow-soft">
-              <HardHat size={18} strokeWidth={1.8} />
+          <div className="mt-4 inline-flex items-center gap-3 rounded-xl border border-navy-100 bg-white/85 px-3 py-2 backdrop-blur">
+            <div className="grid h-9 w-9 flex-none place-items-center rounded-full bg-navy-700 text-white shadow-soft">
+              <HardHat size={16} strokeWidth={1.8} />
             </div>
             <div>
               <div className="flex items-baseline gap-2">
-                <span className="font-display text-xl font-extrabold leading-none text-navy-700">
+                <span className="font-display text-lg font-extrabold leading-none text-navy-700">
                   7+
                 </span>
                 <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-navy-600">
                   Years of experience
                 </span>
               </div>
-              <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-500">
+              <p className="mt-0.5 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-500">
                 In BIM modeling & coordination
               </p>
             </div>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-4">
             <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-navy-500">
               Software Proficiency
             </p>
-            <ul className="mt-3 flex flex-wrap items-end gap-3">
+            <ul className="mt-2 flex flex-wrap items-end gap-3">
               {softwareIcons.map((name) => (
-                <li key={name} className="flex flex-col items-center gap-1.5">
+                <li key={name} className="flex flex-col items-center gap-1">
                   <SoftwareLogo
                     name={name}
-                    size={44}
+                    size={40}
                     className="rounded-lg shadow-soft"
                   />
                   <span className="text-[10px] font-medium text-ink-700">
@@ -86,7 +86,7 @@ export default function Hero() {
             </ul>
           </div>
 
-          <div className="mt-7 flex flex-wrap items-center gap-3">
+          <div className="mt-5 flex flex-wrap items-center gap-3">
             <a href="#projects" className="btn-accent">
               View Projects
               <ArrowRight size={16} />
@@ -106,7 +106,7 @@ export default function Hero() {
         <HeroPortrait />
       </div>
 
-      <div className="mt-12 border-t border-navy-100 sm:mt-16" />
+      <div className="mt-4 border-t border-navy-100 sm:mt-5" />
     </section>
   );
 }
@@ -116,7 +116,7 @@ function HeroPortrait() {
 
   return (
     <div className="relative">
-      <div className="relative h-[440px] sm:h-[480px] lg:h-[560px]">
+      <div className="relative h-[400px] sm:h-[440px] lg:h-[520px]">
         {/* Navy mat behind the photo — fills the diagonal cut-away, slightly larger so navy peeks out */}
         <div
           aria-hidden

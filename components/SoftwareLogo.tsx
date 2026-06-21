@@ -1,14 +1,16 @@
 /**
  * Branded software logos.
  *
- * Resolves the display name to the matching image file in /public/logo/
- * and renders it at the requested size. Unknown names fall back to the
- * Carrier HAP logo (the generic / "other" slot).
+ * Each source PNG (in /public/logo/) has its own intrinsic canvas size and
+ * varying amounts of internal padding around the brand mark. We normalise
+ * the *visual* size with a per-logo SCALE factor so they all appear at
+ * roughly the same on-screen footprint, regardless of how tight the
+ * original PNG crop is.
  *
  * To add a new tool:
- *   1. Drop the PNG (or SVG) into /public/logo/<name>.png
- *   2. Add an entry to LOGO_FILE below
- *   3. Add any aliases (display names) to ALIAS
+ *   1. Drop PNG (or SVG) into /public/logo/<name>.png
+ *   2. Add entries to LOGO_FILE + ALIAS
+ *   3. Optionally tweak SCALE if the icon looks under/over-sized
  */
 
 type Props = {
@@ -33,6 +35,20 @@ const LOGO_FILE: Record<LogoKey, string> = {
   dynamo: "/logo/dynamo.png",
   bim360: "/logo/bim.png",
   hap: "/logo/carrier.png",
+};
+
+/**
+ * Visual-size normalisation. 1 = render image at the natural object-contain
+ * size of the wrapper. >1 = grow the icon (good for PNGs with whitespace
+ * around the mark). <1 = shrink (good for PNGs that fill edge-to-edge).
+ */
+const SCALE: Record<LogoKey, number> = {
+  revit: 1.0,        // good fill
+  autocad: 0.85,     // slight shrink — solid red square otherwise dominates
+  navisworks: 1.3,   // landscape wordmark, needs to grow visually
+  dynamo: 1.0,
+  bim360: 0.9,       // shrink a touch — large B is otherwise oversized
+  hap: 1.15,         // landscape Carrier logo, slight grow
 };
 
 const ALIAS: Record<string, LogoKey> = {
@@ -62,16 +78,20 @@ export default function SoftwareLogo({
 }: Props) {
   const key: LogoKey = ALIAS[name.toLowerCase().trim()] ?? "hap";
   const src = LOGO_FILE[key];
+  const scale = SCALE[key];
 
   return (
-    <img
-      src={src}
-      alt={name}
-      width={size}
-      height={size}
-      draggable={false}
-      className={`block shrink-0 select-none object-contain ${className}`}
+    <div
       style={{ width: size, height: size }}
-    />
+      className={`grid shrink-0 place-items-center overflow-hidden ${className}`}
+    >
+      <img
+        src={src}
+        alt={name}
+        draggable={false}
+        className="block max-h-full max-w-full select-none object-contain"
+        style={{ transform: `scale(${scale})`, transformOrigin: "center" }}
+      />
+    </div>
   );
 }
