@@ -225,15 +225,11 @@ export const projects: Project[] = [
     slug: "noru-hotel",
     photos: ["noru-1.jpg", "noru-2.jpg", "noru-3.jpg"],
     diagrams: [
-      { src: "noru-dia-1.jpeg", label: "Air Conditioning — CDP & Controller Layout", discipline: "Mechanical" },
-      { src: "noru-dia-2.jpg",  label: "Air Conditioning — Ductwork Layout",         discipline: "Mechanical" },
-      { src: "noru-dia-3.jpg",  label: "Air Conditioning — Copper Pipework",         discipline: "Mechanical" },
-      { src: "noru-dia-4.jpg",  label: "Ventilation — Heat Exchange",                discipline: "Ventilation" },
-      { src: "noru-dia-5.jpg",  label: "Fire Fighting — Layout",                     discipline: "Fire Fighting" },
-      { src: "noru-dia-6.jpg",  label: "Plumbing — Layout",                          discipline: "Plumbing" },
-      { src: "noru-dia-7.jpg",  label: "Lighting — Layout",                          discipline: "Electrical" },
-      { src: "noru-dia-8.jpg",  label: "Pump Room — Boiler & DHW Schematic",         discipline: "Plumbing" },
-      { src: "pump-room-detail.jpg", label: "Pump Room — Coordinated Detail (CE-046-23-DET-01 Rev D)", discipline: "Mechanical" },
+      {
+        src: "noru-dia-1.jpg",
+        label: "Pump Room — Plumbing Schematic Layout (CE-046-23-DET-01)",
+        discipline: "Plumbing",
+      },
     ],
     coordination: [
       {
