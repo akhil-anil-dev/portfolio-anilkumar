@@ -77,9 +77,11 @@ export default function ProjectPanel({
           {/* Header */}
           <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-ink-900/[0.08] bg-navy-50/90 px-6 py-5 backdrop-blur sm:px-8">
             <div className="min-w-0">
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent-600">
-                Featured Project
-              </p>
+              {project.sector && (
+                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent-600">
+                  {project.sector}
+                </p>
+              )}
               <h2 className="mt-1.5 font-display text-2xl font-semibold leading-tight text-navy-700 sm:text-3xl">
                 {project.name}
               </h2>

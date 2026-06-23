@@ -136,6 +136,7 @@ export type Project = {
   location: string;
   client?: string;
   consultant?: string;
+  sector?: string;
   role: string;
   overview: string;
   tools: string[];
@@ -143,6 +144,8 @@ export type Project = {
   image?: string;
   /** Featured projects get a hero card with photo carousel + "View Project" button. */
   featured?: boolean;
+  /** URL-safe project ID. Used to build folder paths under /public/projects/<slug>/ */
+  slug?: string;
   /** Photo filenames (in /public/projects/<slug>/photos/) for the auto-rotating carousel. */
   photos?: string[];
   /** Engineering diagrams shown in the project panel (watermarked JPG previews only — no PDFs served). */
@@ -167,12 +170,13 @@ export const projects: Project[] = [
   {
     name: "Quad Central Business Center",
     location: "Mrieħel, Malta",
-    consultant: "ECL",
+    sector: "Commercial",
     role: "MEP Coordinator & Modeler",
     overview:
       "Coordinated mechanical and electrical systems in Revit, with clash detection and resolution managed through Revit and Navisworks workflows.",
     tools: ["Revit", "Navisworks", "AutoCAD", "Dynamo"],
     featured: true,
+    slug: "quad-malta",
     photos: [
       "quad-1.jpg",
       "quad-2.jpg",
@@ -210,106 +214,54 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Noru Hotel, Paceville",
-    location: "Malta",
-    consultant: "ECL",
-    role: "MEP Modeler — Mechanical Pump Room",
+    name: "Noru Hotel",
+    location: "Paceville, St. Julian's, Malta",
+    sector: "Hospitality",
+    role: "MEP BIM Coordinator — Pump Room",
     overview:
-      "Developed and coordinated the mechanical pump room — modeling, clash resolution, and optimised layouts in coordination with MEP and structural teams. Delivered accurate pump-room documentation and models.",
+      "Modern hospitality development in Paceville, Malta. My involvement focused on BIM development, coordination, and documentation of the pump room — ensuring efficient integration of mechanical and plumbing services within the allocated space.",
     tools: ["Revit", "AutoCAD"],
-    learnings:
-      "Hands-on experience across project stages in pump-room design and inter-discipline coordination.",
-    image: "/projects/noru-hotel.jpg",
+    featured: true,
+    slug: "noru-hotel",
+    photos: ["noru-1.jpg", "noru-2.jpg", "noru-3.jpg"],
+    diagrams: [
+      { src: "noru-dia-1.jpeg", label: "Air Conditioning — CDP & Controller Layout", discipline: "Mechanical" },
+      { src: "noru-dia-2.jpg",  label: "Air Conditioning — Ductwork Layout",         discipline: "Mechanical" },
+      { src: "noru-dia-3.jpg",  label: "Air Conditioning — Copper Pipework",         discipline: "Mechanical" },
+      { src: "noru-dia-4.jpg",  label: "Ventilation — Heat Exchange",                discipline: "Ventilation" },
+      { src: "noru-dia-5.jpg",  label: "Fire Fighting — Layout",                     discipline: "Fire Fighting" },
+      { src: "noru-dia-6.jpg",  label: "Plumbing — Layout",                          discipline: "Plumbing" },
+      { src: "noru-dia-7.jpg",  label: "Lighting — Layout",                          discipline: "Electrical" },
+      { src: "noru-dia-8.jpg",  label: "Pump Room — Boiler & DHW Schematic",         discipline: "Plumbing" },
+      { src: "pump-room-detail.jpg", label: "Pump Room — Coordinated Detail (CE-046-23-DET-01 Rev D)", discipline: "Mechanical" },
+    ],
+    coordination: [
+      {
+        src: "noru-bim-1.jpg",
+        alt: "Pump room — Revit BIM 3D coordination view (overall)",
+        caption: "Pump room — 3D BIM coordination model showing boilers, DHW tanks and primary pipework.",
+      },
+      {
+        src: "noru-bim-2.jpg",
+        alt: "Pump room — Revit BIM 3D coordination view (detail)",
+        caption: "Detailed isometric view — equipment connections, valving and supports.",
+      },
+    ],
+    responsibilities: [
+      "Developed detailed BIM models for the pump room using Autodesk Revit.",
+      "Coordinated mechanical, plumbing, and fire-fighting services within the pump room environment.",
+      "Identified and resolved clashes between building services and structural elements.",
+      "Optimized equipment layout and service routing to improve accessibility and maintainability.",
+      "Produced coordinated shop drawings, sections, elevations, and detailed construction documentation.",
+      "Supported coordination reviews and implemented design updates based on project requirements.",
+      "Maintained model quality and compliance with project BIM standards.",
+    ],
   },
-  {
-    name: "Hyatt Centric Hotel",
-    location: "Malta",
-    consultant: "B.Nell",
-    role: "MEP Coordinator & Modeler",
-    overview:
-      "Coordinated mechanical and electrical systems in Revit, with clash detection and resolution managed through Revit and Navisworks workflows.",
-    tools: ["Revit", "AutoCAD", "Navisworks"],
-    learnings:
-      "Managed LOD 300–500 models across IFA, IFC, and As-Fitted stages with strong inter-discipline collaboration.",
-    image: "/projects/hyatt-centric.jpg",
-  },
-  {
-    name: "Gasan Mamo Insurance, Qormi",
-    location: "Malta",
-    consultant: "ECL",
-    role: "MEP Coordinator & Modeler",
-    overview:
-      "Modeled and coordinated MEP systems with architectural design across 3B + GF + L4 + RF, including duct redesign and quantity estimation in constrained service zones.",
-    tools: ["Revit", "AutoCAD"],
-    learnings:
-      "Strengthened duct redesign skills and effective coordination within tight ceiling voids.",
-    image: "/projects/gasan-mamo.jpg",
-  },
-  {
-    name: "Sarah Gasan Villa",
-    location: "Malta",
-    role: "MEP Modeler",
-    overview:
-      "MEP modeling and coordination for a private residential villa, delivering services layouts aligned with architectural intent.",
-    tools: ["Revit", "AutoCAD"],
-    image: "/projects/sarah-gasan-villa.jpg",
-  },
-  {
-    name: "Park Hyatt Hotel, Old Ad'Diriyah",
-    location: "Riyadh, KSA",
-    client: "Diriyah Company",
-    consultant: "SE Consultant",
-    role: "MEP Coordinator & Modeler",
-    overview:
-      "Modeled mechanical systems to high precision standards and used Navisworks for clash detection — collaborating across teams to resolve conflicts efficiently.",
-    tools: ["Revit", "AutoCAD", "Navisworks", "HAP"],
-    learnings:
-      "Improved real-time problem-solving and integration of complex mechanical systems into heritage-influenced architecture.",
-    image: "/projects/park-hyatt-riyadh.jpg",
-  },
-  {
-    name: "Address The Bay",
-    location: "Dubai, UAE",
-    client: "EMAAR",
-    consultant: "CKR (MEP)",
-    role: "MEP Modeler & Coordinator",
-    overview:
-      "Led development and coordination of MEP systems with seamless integration across disciplines. Proactively identified and resolved clashes in Navisworks to minimise rework.",
-    tools: ["Revit", "AutoCAD", "Navisworks"],
-    learnings:
-      "Sharpened communication and developed innovative solutions for complex modeling challenges.",
-    image: "/projects/address-the-bay.jpg",
-  },
-  {
-    name: "220 Ritz Carlton Hotel & Branded Residences",
-    location: "Middle East",
-    role: "MEP BIM Modeler",
-    overview:
-      "Modeled MEP systems for a flagship hotel and branded-residence development, coordinating with discipline leads throughout design stages.",
-    tools: ["Revit", "Navisworks", "AutoCAD"],
-    image: "/projects/ritz-carlton.jpg",
-  },
-  {
-    name: "Lusail Plaza Tower (Plot-C & Plot-D)",
-    location: "Lusail, Qatar",
-    client: "Lusail Real Estate Development Co.",
-    role: "MEP Modeler (Utility Mechanical Systems)",
-    overview:
-      "Modeled mechanical utility systems in Revit and managed clash detection workflows. Delivered LOD 300–500 models across IFA, IFC, and As-Fitted stages.",
-    tools: ["Revit", "AutoCAD", "Navisworks"],
-    learnings:
-      "Deepened expertise in tower-scale model coordination and integration with multi-discipline teams.",
-    image: "/projects/lusail-plaza.jpg",
-  },
-  {
-    name: "Geogreen Shield Refinery Expansion",
-    location: "Qatar",
-    role: "MEP BIM Modeler",
-    overview:
-      "Contributed to the BIM coordination and modeling for a major refinery expansion programme, delivering accurate services layouts in a heavy-industrial context.",
-    tools: ["Revit", "Navisworks", "AutoCAD"],
-    image: "/projects/geogreen.jpg",
-  },
+
+  // ─── Add additional projects here as you share details ─────────────
+  // Same shape as Quad Central above. For featured projects: include
+  // `featured: true` and `slug: "<folder-name>"`. Photos / diagrams /
+  // coordination images live under /public/projects/<slug>/.
 ];
 
 /* ─────────── Certifications ─────────── */

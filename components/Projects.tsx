@@ -25,12 +25,14 @@ export default function Projects() {
           />
         </Reveal>
 
-        {/* Featured project — full-width hero card */}
-        {featured.map((p) => (
-          <Reveal key={p.name}>
-            <FeaturedCard project={p} onOpen={() => setOpenProject(p)} />
-          </Reveal>
-        ))}
+        {/* Featured projects — full-width hero cards, stacked with breathing room */}
+        <div className="space-y-8 sm:space-y-10">
+          {featured.map((p) => (
+            <Reveal key={p.name}>
+              <FeaturedCard project={p} onOpen={() => setOpenProject(p)} />
+            </Reveal>
+          ))}
+        </div>
 
         {/* Other projects — existing grid */}
         {rest.length > 0 && (
@@ -111,9 +113,9 @@ export default function Projects() {
       {openProject && (
         <ProjectPanel
           project={openProject}
-          photosBase="/projects/quad-malta/photos"
-          diagramsBase="/projects/quad-malta/diagrams"
-          coordinationBase="/projects/quad-malta/coordination"
+          photosBase={`/projects/${openProject.slug}/photos`}
+          diagramsBase={`/projects/${openProject.slug}/diagrams`}
+          coordinationBase={`/projects/${openProject.slug}/coordination`}
           open
           onClose={() => setOpenProject(null)}
         />
@@ -130,7 +132,7 @@ function FeaturedCard({
   onOpen: () => void;
 }) {
   const photos = (project.photos ?? []).map(
-    (p) => `/projects/quad-malta/photos/${p}`
+    (p) => `/projects/${project.slug}/photos/${p}`
   );
 
   return (
@@ -143,10 +145,6 @@ function FeaturedCard({
             aspect="aspect-[16/10] lg:aspect-auto lg:h-full"
             alt={project.name}
           />
-          <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-navy-100 bg-white/95 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-navy-700 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Featured
-          </span>
         </div>
 
         {/* Meta + CTA */}
