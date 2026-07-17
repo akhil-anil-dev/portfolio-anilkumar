@@ -288,6 +288,60 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    name: "Gasan Legacy Offices",
+    location: "Mrieħel, Malta",
+    sector: "Commercial · Office Fit-out",
+    client: "Gasan Group",
+    role: "MEP BIM Coordinator",
+    overview:
+      "MEP BIM coordination for the Legacy Offices at Mrieħel, Malta — Level 5 fit-out. Delivered coordinated services across electrical containment, extra-low voltage, lighting, plumbing, and drainage — with dedicated shop-drawing sets and pipework/cable schedules for a build-ready package.",
+    tools: ["Revit", "AutoCAD"],
+    featured: true,
+    slug: "gasan-legacy",
+    photos: ["gasan-legacy-1.jpg"],
+    diagrams: [
+      { src: "l5-ac.jpg",  label: "Air Conditioning System — Level 5", discipline: "Mechanical" },
+      { src: "l5-vnt.jpg", label: "Ventilation System — Level 5",       discipline: "Ventilation" },
+      { src: "l5-pl.jpg",  label: "Plumbing System — Level 5",          discipline: "Plumbing" },
+      { src: "rf-pl.jpg",  label: "Roof Plumbing — Water Tanks & Pumps", discipline: "Plumbing" },
+      { src: "l5-dr.jpg",  label: "Drainage System — Level 5",          discipline: "Plumbing" },
+      { src: "l5-ltg.jpg", label: "Lighting Layout — Level 5",          discipline: "Electrical" },
+      { src: "l5-pwr.jpg", label: "Power Layout — Level 5",             discipline: "Electrical" },
+      { src: "l5-elv.jpg", label: "Extra Low Voltage — Level 5",        discipline: "Electrical" },
+      { src: "l5-cm.jpg",  label: "Cable Management — Level 5",         discipline: "Electrical" },
+    ],
+    coordination: [
+      {
+        src: "gasan-bim-1.jpg",
+        alt: "Gasan Legacy Offices — Revit BIM aerial perspective of the rooftop plant",
+        caption: "Rooftop plant — Revit BIM aerial view showing the full condenser array, plant-room housing, and parapet enclosure coordinated along the length of the building.",
+      },
+      {
+        src: "gasan-bim-2.jpg",
+        alt: "Gasan Legacy Offices — Revit BIM top-down view of the rooftop tank room and condensers",
+        caption: "Top-down BIM view — cold-water tank room, condenser blocks, and plant housing laid out inside the rooftop enclosure with clear maintenance access.",
+      },
+      {
+        src: "gasan-site-1.jpg",
+        alt: "Gasan Legacy Offices — coordinated ceiling services and light panels on site",
+        caption: "Coordinated services above the glazed office — insulated ductwork, ceiling light panels, and containment installed to match the BIM model.",
+      },
+      {
+        src: "gasan-site-2.jpg",
+        alt: "Gasan Legacy Offices — installed plumbing detail with water heater",
+        caption: "Installed plumbing detail — DHW/DCW distribution, copper riser, and Tesy water heater matching the coordinated pipework schedule.",
+      },
+    ],
+    responsibilities: [
+      "Developed coordinated Revit BIM models for the Level 5 office fit-out.",
+      "Coordinated Electrical (Power, Lighting, ELV, Cable Management) and Plumbing (Water & Drainage) services with the architectural design.",
+      "Produced shop-drawing sets, schedules, and containment/pipework take-offs per discipline.",
+      "Maintained BIM standards and QA/QC across the model and drawing deliverables.",
+      "Supported coordination reviews and applied approved design updates during the delivery cycle.",
+    ],
+  },
+
   // ─── Add additional projects here as you share details ─────────────
   // Same shape as Quad Central above. For featured projects: include
   // `featured: true` and `slug: "<folder-name>"`. Photos / diagrams /
