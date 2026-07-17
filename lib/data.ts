@@ -265,7 +265,7 @@ export const projects: Project[] = [
     tools: ["Revit", "Navisworks", "AutoCAD"],
     featured: true,
     slug: "mkhl",
-    photos: ["mkhl-1.jpg", "mkhl-2.jpg", "mkhl-3.jpg"],
+    photos: ["mkhl-1.jpg", "mkhl-2.jpg", "mkhl-3.jpg", "mkhl-4.jpg", "mkhl-5.jpg"],
     diagrams: [
       { src: "ac-gf.jpg",  label: "Air Conditioning — Ground Floor", discipline: "Mechanical" },
       { src: "vnt-gf.jpg", label: "Ventilation — Ground Floor",       discipline: "Ventilation" },
