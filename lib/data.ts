@@ -254,6 +254,40 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    name: "MIDI T14 — MKHL",
+    location: "Malta",
+    sector: "Commercial · Coworking",
+    client: "Midknight Holdings",
+    role: "MEP BIM Coordinator",
+    overview:
+      "Fit-out MEP coordination for the MIDI Tower 14 workspace floors, delivered across Ground Floor and Mezzanine levels. Coordinated mechanical, electrical, and plumbing services within the exposed-ceiling office aesthetic to keep services organised, accessible, and installation-ready.",
+    tools: ["Revit", "Navisworks", "AutoCAD"],
+    featured: true,
+    slug: "mkhl",
+    photos: ["mkhl-1.jpg", "mkhl-2.jpg", "mkhl-3.jpg"],
+    diagrams: [
+      { src: "ac-gf.jpg",  label: "Air Conditioning — Ground Floor", discipline: "Mechanical" },
+      { src: "vnt-gf.jpg", label: "Ventilation — Ground Floor",       discipline: "Ventilation" },
+      { src: "vnt-mz.jpg", label: "Ventilation — Mezzanine",          discipline: "Ventilation" },
+      { src: "ff-mz.jpg",  label: "Fire Fighting — Mezzanine",        discipline: "Fire Fighting" },
+      { src: "pl-gf.jpg",  label: "Plumbing — Ground Floor",          discipline: "Plumbing" },
+      { src: "pl-mz.jpg",  label: "Plumbing — Mezzanine",             discipline: "Plumbing" },
+      { src: "ltg-gf.jpg", label: "Lighting — Ground Floor",          discipline: "Electrical" },
+      { src: "ltg-mz.jpg", label: "Lighting — Mezzanine",             discipline: "Electrical" },
+      { src: "pwr-gf.jpg", label: "Power — Ground Floor",             discipline: "Electrical" },
+      { src: "pwr-mz.jpg", label: "Power — Mezzanine",                discipline: "Electrical" },
+    ],
+    responsibilities: [
+      "Developed coordinated MEP BIM models for Ground Floor and Mezzanine levels in Autodesk Revit.",
+      "Coordinated Mechanical, Electrical, Plumbing, and Fire-Fighting services with the architectural fit-out.",
+      "Resolved services routing within an exposed-services ceiling design — kept the aesthetic clean while maintaining access.",
+      "Produced shop-drawing sets per discipline for both levels: AC, Ventilation, Fire Fighting, Plumbing, Lighting, and Power.",
+      "Supported coordination reviews and applied approved design changes to keep the model in step with site progress.",
+      "Maintained BIM standards and QA/QC across the full document deliverable set.",
+    ],
+  },
+
   // ─── Add additional projects here as you share details ─────────────
   // Same shape as Quad Central above. For featured projects: include
   // `featured: true` and `slug: "<folder-name>"`. Photos / diagrams /
