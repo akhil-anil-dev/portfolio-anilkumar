@@ -35,7 +35,7 @@ export default function Hero() {
           </p>
 
           <h1 className="mt-2 whitespace-nowrap font-display text-[2.5rem] font-extrabold leading-[0.95] tracking-tightest text-navy-700 sm:text-[3.25rem] lg:text-[4.25rem]">
-            ANILKUMAR N.J.
+            ANILKUMAR N J
           </h1>
 
           <div className="mt-3 h-1 w-20 rounded-full bg-accent" />

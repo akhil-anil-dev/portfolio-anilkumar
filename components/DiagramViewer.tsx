@@ -28,7 +28,7 @@ export default function DiagramViewer({
   index,
   onClose,
   onIndexChange,
-  watermark = "ANILKUMAR  N.J.",
+  watermark = "ANILKUMAR  N  J",
 }: Props) {
   const d = diagrams[index];
 
@@ -167,7 +167,7 @@ export default function DiagramViewer({
 }
 
 /**
- * Pattern of "ANILKUMAR N.J." repeated diagonally.
+ * Pattern of "ANILKUMAR N J" repeated diagonally.
  * Rendered via an inline SVG `background-image` so it scales with the
  * diagram without modifying the original raster file.
  */

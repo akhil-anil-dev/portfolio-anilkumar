@@ -57,7 +57,7 @@ export default function ProfilePhoto() {
       {/* Bottom-left caption — fades in on hover. */}
       <figcaption className="pointer-events-none absolute bottom-4 left-4 z-10 flex items-center gap-2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-white">
-          Anilkumar N.J.
+          Anilkumar N J
         </span>
       </figcaption>
     </figure>

@@ -258,7 +258,7 @@ export default function ProjectPanel({
                             className="absolute inset-0 h-full w-full select-none object-cover transition-transform duration-500 ease-out group-hover/diagram:scale-[1.04]"
                           />
                           {/* small watermark tile on thumbnail */}
-                          <ThumbWatermark text="ANILKUMAR  N.J." />
+                          <ThumbWatermark text="ANILKUMAR  N  J" />
                           <span className="absolute right-2 top-2 rounded-md border border-ink-900/10 bg-white/95 px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-ink-700 backdrop-blur">
                             {d.discipline}
                           </span>

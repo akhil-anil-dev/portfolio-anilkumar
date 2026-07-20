@@ -7,7 +7,7 @@
 
 export const profile = {
   name: "Anilkumar Nenmaniyil Jagadeesan",
-  shortName: "Anilkumar N.J.",
+  shortName: "Anilkumar N J",
   title: "MEP BIM Coordinator",
   location: "Malta, Europe",
   summary:
