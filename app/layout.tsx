@@ -23,12 +23,40 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://anilkumar-n-j.vercel.app"),
   title: `${profile.shortName} — ${profile.title}`,
   description: profile.summary,
+  keywords: [
+    "MEP BIM Coordinator",
+    "BIM",
+    "Revit",
+    "Navisworks",
+    "Dynamo",
+    "AutoCAD",
+    "MEP Coordination",
+    "Clash Detection",
+    "Malta",
+    "GCC",
+  ],
+  authors: [{ name: profile.name }],
   openGraph: {
     title: `${profile.shortName} — ${profile.title}`,
     description: profile.summary,
     type: "website",
+    url: "https://anilkumar-n-j.vercel.app",
+    siteName: `${profile.shortName} · Portfolio`,
+    locale: "en_US",
+    // `app/opengraph-image.tsx` is auto-wired for og:image
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${profile.shortName} — ${profile.title}`,
+    description: profile.summary,
+    // Uses the same opengraph-image by default
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
