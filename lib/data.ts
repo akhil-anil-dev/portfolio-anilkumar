@@ -219,6 +219,27 @@ export const projects: Project[] = [
   },
 
   {
+    name: "ASTE Hotel",
+    location: "Paceville, Malta",
+    sector: "Hospitality",
+    role: "MEP BIM Coordinator",
+    overview:
+      "MEP BIM coordination for ASTE Hotel, a multi-storey hospitality development in Paceville, Malta. Delivered coordinated Air Conditioning, Ventilation, and Plumbing models across the ground floor and roof plant areas, together with a combined-services model and shaft-coordination details to keep all disciplines conflict-free through the building's risers.",
+    tools: ["Revit", "AutoCAD"],
+    featured: true,
+    slug: "aste-hotel",
+    photos: ["aste-hotel-1.jpg", "aste-hotel-2.jpg", "aste-hotel-3.jpg", "aste-hotel-4.jpg"],
+    diagrams: [
+      { src: "gf-ac.jpg",         label: "Air Conditioning — Ground Floor",        discipline: "Mechanical" },
+      { src: "rf-ac.jpg",         label: "Air Conditioning — Roof (VRF Outdoor Units)", discipline: "Mechanical" },
+      { src: "rf-vnt.jpg",        label: "Ventilation — Roof",                     discipline: "Ventilation" },
+      { src: "rf-plumbing.jpg",   label: "Plumbing — Roof (Water Tanks & Booster Pumps)", discipline: "Plumbing" },
+      { src: "gf-combined.jpg",   label: "Combined MEP Layout — Ground Floor",     discipline: "Mechanical" },
+      { src: "shaft-i-detail.jpg", label: "Shaft I — Riser Coordination Detail (All Levels)", discipline: "Mechanical" },
+    ],
+  },
+
+  {
     name: "MIDI T14 — MKHL",
     location: "Malta",
     sector: "Commercial · Coworking",
