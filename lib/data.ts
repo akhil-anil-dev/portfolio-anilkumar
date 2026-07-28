@@ -447,15 +447,19 @@ export const certifications: {
 ];
 
 /* ─────────── Education ─────────── */
-/** TODO: replace with real education history. */
-export const education: { degree: string; institution: string; period?: string }[] =
-  [
-    {
-      degree: "Diploma / Degree in Mechanical Engineering (TODO)",
-      institution: "TODO — Institution name",
-      period: "TODO — Years",
-    },
-  ];
+export const education: {
+  degree: string;
+  institution: string;
+  period?: string;
+  grade?: string;
+}[] = [
+  {
+    degree: "Diploma in Mechanical Engineering",
+    institution: "Kerala Board of Technical Education",
+    period: "2016 – 2019",
+    grade: "8.6 CGPA",
+  },
+];
 
 /* ─────────── Navigation ─────────── */
 export const nav = [

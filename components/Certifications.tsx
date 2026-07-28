@@ -63,6 +63,11 @@ export default function Certifications() {
                       {e.institution}
                       {e.period && <span> · {e.period}</span>}
                     </p>
+                    {e.grade && (
+                      <p className="mt-1 text-sm font-semibold text-accent-600">
+                        {e.grade}
+                      </p>
+                    )}
                   </div>
                 </div>
               </Reveal>
