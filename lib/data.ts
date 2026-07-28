@@ -217,46 +217,6 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    name: "Noru Hotel",
-    location: "Paceville, St. Julian's, Malta",
-    sector: "Hospitality",
-    role: "MEP BIM Coordinator — Pump Room",
-    overview:
-      "Modern hospitality development in Paceville, Malta. My involvement focused on BIM development, coordination, and documentation of the pump room — ensuring efficient integration of mechanical and plumbing services within the allocated space.",
-    tools: ["Revit", "AutoCAD"],
-    featured: true,
-    slug: "noru-hotel",
-    photos: ["noru-1.jpg", "noru-2.jpg", "noru-3.jpg"],
-    diagrams: [
-      {
-        src: "noru-dia-1.jpg",
-        label: "Pump Room — Plumbing Schematic Layout (CE-046-23-DET-01)",
-        discipline: "Plumbing",
-      },
-    ],
-    coordination: [
-      {
-        src: "noru-bim-1.jpg",
-        alt: "Pump room — Revit BIM 3D coordination view (overall)",
-        caption: "Pump room — 3D BIM coordination model showing boilers, DHW tanks and primary pipework.",
-      },
-      {
-        src: "noru-bim-2.jpg",
-        alt: "Pump room — Revit BIM 3D coordination view (detail)",
-        caption: "Detailed isometric view — equipment connections, valving and supports.",
-      },
-    ],
-    responsibilities: [
-      "Developed detailed BIM models for the pump room using Autodesk Revit.",
-      "Coordinated mechanical, plumbing, and fire-fighting services within the pump room environment.",
-      "Identified and resolved clashes between building services and structural elements.",
-      "Optimized equipment layout and service routing to improve accessibility and maintainability.",
-      "Produced coordinated shop drawings, sections, elevations, and detailed construction documentation.",
-      "Supported coordination reviews and implemented design updates based on project requirements.",
-      "Maintained model quality and compliance with project BIM standards.",
-    ],
-  },
 
   {
     name: "MIDI T14 — MKHL",
@@ -387,6 +347,47 @@ export const projects: Project[] = [
       "Issued for Construction (IFC) Drawings",
       "Coordination & Constructability Review",
       "As-Fitted Drawings and Final Documentation",
+    ],
+  },
+
+  {
+    name: "Noru Hotel",
+    location: "Paceville, St. Julian's, Malta",
+    sector: "Hospitality",
+    role: "MEP BIM Coordinator — Pump Room",
+    overview:
+      "Modern hospitality development in Paceville, Malta. My involvement focused on BIM development, coordination, and documentation of the pump room — ensuring efficient integration of mechanical and plumbing services within the allocated space.",
+    tools: ["Revit", "AutoCAD"],
+    featured: true,
+    slug: "noru-hotel",
+    photos: ["noru-1.jpg", "noru-2.jpg", "noru-3.jpg"],
+    diagrams: [
+      {
+        src: "noru-dia-1.jpg",
+        label: "Pump Room — Plumbing Schematic Layout (CE-046-23-DET-01)",
+        discipline: "Plumbing",
+      },
+    ],
+    coordination: [
+      {
+        src: "noru-bim-1.jpg",
+        alt: "Pump room — Revit BIM 3D coordination view (overall)",
+        caption: "Pump room — 3D BIM coordination model showing boilers, DHW tanks and primary pipework.",
+      },
+      {
+        src: "noru-bim-2.jpg",
+        alt: "Pump room — Revit BIM 3D coordination view (detail)",
+        caption: "Detailed isometric view — equipment connections, valving and supports.",
+      },
+    ],
+    responsibilities: [
+      "Developed detailed BIM models for the pump room using Autodesk Revit.",
+      "Coordinated mechanical, plumbing, and fire-fighting services within the pump room environment.",
+      "Identified and resolved clashes between building services and structural elements.",
+      "Optimized equipment layout and service routing to improve accessibility and maintainability.",
+      "Produced coordinated shop drawings, sections, elevations, and detailed construction documentation.",
+      "Supported coordination reviews and implemented design updates based on project requirements.",
+      "Maintained model quality and compliance with project BIM standards.",
     ],
   },
 

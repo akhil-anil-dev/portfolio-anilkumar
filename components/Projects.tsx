@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight, ChevronDown, MapPin } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import ProjectPlaceholder from "./ProjectPlaceholder";
@@ -9,10 +9,18 @@ import PhotoCarousel from "./PhotoCarousel";
 import ProjectPanel from "./ProjectPanel";
 import { projects, type Project } from "@/lib/data";
 
+const INITIAL_VISIBLE = 3;
+
 export default function Projects() {
   const [openProject, setOpenProject] = useState<Project | null>(null);
+  const [showAll, setShowAll] = useState(false);
   const featured = projects.filter((p) => p.featured);
   const rest = projects.filter((p) => !p.featured);
+
+  const visibleFeatured = showAll
+    ? featured
+    : featured.slice(0, INITIAL_VISIBLE);
+  const hiddenCount = featured.length - INITIAL_VISIBLE;
 
   return (
     <section id="projects" className="bg-white pt-10 pb-24 sm:pt-14 sm:pb-28">
@@ -27,12 +35,31 @@ export default function Projects() {
 
         {/* Featured projects — full-width hero cards, stacked with breathing room */}
         <div className="space-y-8 sm:space-y-10">
-          {featured.map((p) => (
+          {visibleFeatured.map((p) => (
             <Reveal key={p.name}>
               <FeaturedCard project={p} onOpen={() => setOpenProject(p)} />
             </Reveal>
           ))}
         </div>
+
+        {/* View more / show less toggle */}
+        {hiddenCount > 0 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((v) => !v)}
+              className="inline-flex items-center gap-2 rounded-full border border-navy-100 bg-navy-50/60 px-6 py-3 text-sm font-semibold text-navy-700 transition hover:border-accent/40 hover:bg-navy-50"
+            >
+              {showAll ? "Show Less" : `View More Projects (${hiddenCount})`}
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-300 ${
+                  showAll ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          </div>
+        )}
 
         {/* Other projects — existing grid */}
         {rest.length > 0 && (
