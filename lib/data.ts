@@ -157,6 +157,10 @@ export type Project = {
   }[];
   /** Key responsibilities & contributions — rendered as a bulleted block in the panel. */
   responsibilities?: string[];
+  /** Overrides the responsibilities section heading (default: "Key Responsibilities & Contributions"). */
+  responsibilitiesLabel?: string;
+  /** Ordered process stages — rendered as a left-to-right pipeline (e.g. Design → Coordination → IFC → As-Fitted). */
+  workflow?: string[];
   /** BIM-coordination highlight images (3D model views, as-built photos, collages). */
   coordination?: {
     /** Filename inside /public/projects/<slug>/coordination/ */
@@ -339,6 +343,50 @@ export const projects: Project[] = [
       "Produced shop-drawing sets, schedules, and containment/pipework take-offs per discipline.",
       "Maintained BIM standards and QA/QC across the model and drawing deliverables.",
       "Supported coordination reviews and applied approved design updates during the delivery cycle.",
+    ],
+  },
+
+  {
+    name: "SG Villa",
+    location: "Għargħur, Malta",
+    sector: "Residential · Luxury Villa",
+    role: "MEP BIM Coordinator",
+    overview:
+      "SG Villa is a residential building services project located in Għargħur, Malta. The project involved the development and coordination of MEP services through the detailed design, construction, and final as-fitted stages. As BIM Coordinator, I was responsible for coordinating the building services design and BIM deliverables, ensuring effective integration of MEP systems with architectural and structural requirements.",
+    tools: ["Revit", "AutoCAD"],
+    featured: true,
+    slug: "sg-villa",
+    workflow: [
+      "Detailed Design",
+      "BIM Coordination",
+      "Detailed Drawings",
+      "IFC",
+      "Construction Updates",
+      "As-Fitted Documentation",
+    ],
+    photos: ["sg-villa-1.jpg"],
+    diagrams: [
+      { src: "b1-ac.jpg",                   label: "Air Conditioning — Basement 01",        discipline: "Mechanical" },
+      { src: "b2-ac.jpg",                   label: "Air Conditioning — Basement 02",        discipline: "Mechanical" },
+      { src: "gf-ac.jpg",                   label: "Air Conditioning — Ground Floor",       discipline: "Mechanical" },
+      { src: "l01-ac.jpg",                  label: "Air Conditioning — Level 01",           discipline: "Mechanical" },
+      { src: "rf-ac.jpg",                   label: "Air Conditioning — Roof Level",         discipline: "Mechanical" },
+      { src: "b1-ventilation.jpg",          label: "Ventilation — Basement 01",             discipline: "Ventilation" },
+      { src: "b2-ventilation.jpg",          label: "Ventilation — Basement 02",             discipline: "Ventilation" },
+      { src: "b1-plumbing.jpg",             label: "Plumbing — Basement 01",                discipline: "Plumbing" },
+      { src: "b2-plumbing.jpg",             label: "Plumbing — Basement 02 (Pump Room)",    discipline: "Plumbing" },
+      { src: "b1-drainage.jpg",             label: "Drainage — Basement 01",                discipline: "Plumbing" },
+      { src: "b2-drainage-high.jpg",        label: "Drainage — Basement 02 (High Level)",   discipline: "Plumbing" },
+      { src: "b2-drainage-underfloor.jpg",  label: "Drainage — Basement 02 (Under Floor)",  discipline: "Plumbing" },
+    ],
+    responsibilitiesLabel: "Scope of Work",
+    responsibilities: [
+      "Detailed Design & BIM Development",
+      "Multidisciplinary MEP Coordination",
+      "Detailed Drawings",
+      "Issued for Construction (IFC) Drawings",
+      "Coordination & Constructability Review",
+      "As-Fitted Drawings and Final Documentation",
     ],
   },
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CheckCircle2, ImageIcon, MapPin, X } from "lucide-react";
+import { ArrowRight, CheckCircle2, ImageIcon, MapPin, X } from "lucide-react";
 import type { Project } from "@/lib/data";
 import PhotoCarousel from "./PhotoCarousel";
 import DiagramViewer from "./DiagramViewer";
@@ -172,6 +172,34 @@ export default function ProjectPanel({
               </aside>
             </div>
 
+            {/* Project Workflow */}
+            {project.workflow && project.workflow.length > 0 && (
+              <div className="mt-12">
+                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent-700">
+                  Process
+                </p>
+                <h3 className="mt-2 font-display text-xl font-semibold text-navy-700">
+                  Project Workflow
+                </h3>
+
+                <div className="mt-6 flex flex-wrap items-center gap-y-3">
+                  {project.workflow.map((step, i) => (
+                    <div key={step} className="flex items-center">
+                      <span className="rounded-full border border-ink-900/10 bg-navy-50 px-4 py-2 text-center font-mono text-[11px] font-semibold uppercase tracking-wide text-navy-700">
+                        {step}
+                      </span>
+                      {i < project.workflow!.length - 1 && (
+                        <ArrowRight
+                          size={16}
+                          className="mx-2 flex-none text-accent-600"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Key Responsibilities & Contributions */}
             {project.responsibilities && project.responsibilities.length > 0 && (
               <div className="mt-12">
@@ -179,7 +207,7 @@ export default function ProjectPanel({
                   On this project
                 </p>
                 <h3 className="mt-2 font-display text-xl font-semibold text-navy-700">
-                  Key Responsibilities & Contributions
+                  {project.responsibilitiesLabel ?? "Key Responsibilities & Contributions"}
                 </h3>
 
                 <ul className="mt-6 grid gap-3 sm:grid-cols-2">
