@@ -412,6 +412,49 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    name: "Gasan Mamo Insurance",
+    location: "Qormi, Malta",
+    sector: "Commercial",
+    role: "BIM Coordinator",
+    overview:
+      "Gasan Mamo Insurance Qormi is a commercial office building project in Malta. The project involved detailed design, coordination, and documentation of building services systems to ensure smooth execution and successful handover.",
+    tools: ["Revit", "Navisworks", "AutoCAD", "Dynamo", "BIM 360"],
+    featured: true,
+    slug: "gasan-mamo",
+    photos: ["gasan-mamo-1.jpg"],
+    workflow: [
+      "Detailed Design",
+      "BIM Coordination",
+      "Detailed Drawings",
+      "IFC Drawings",
+      "Coordination & Clash Resolution",
+      "As-Fitted Drawings",
+    ],
+    responsibilitiesLabel: "Scope of Work",
+    responsibilities: [
+      "Detailed Design — Development of detailed MEP design in coordination with architectural and structural models.",
+      "Detailed Drawings — Preparation of coordinated layouts, sections, risers, details and schedules.",
+      "Issued for Construction (IFC) Drawings — Production of construction-ready drawings for site execution.",
+      "Coordination & Clash Resolution — Multidisciplinary coordination and clash detection to ensure accuracy and constructability.",
+      "As-Fitted Drawings — Preparation of as-fitted documentation to reflect the final installed conditions for handover.",
+    ],
+    diagrams: [
+      { src: "gf-ac.jpg",  label: "Air Conditioning Layout — Ground Floor", discipline: "Mechanical" },
+      { src: "l01-ac.jpg", label: "Air Conditioning Layout — Level 01",     discipline: "Mechanical" },
+      { src: "l02-ac.jpg", label: "Air Conditioning Layout — Level 02",     discipline: "Mechanical" },
+      { src: "l03-ac.jpg", label: "Air Conditioning Layout — Level 03",     discipline: "Mechanical" },
+      { src: "l04-ac.jpg", label: "Air Conditioning Layout — Level 04",     discipline: "Mechanical" },
+      { src: "rf-ac.jpg",  label: "Air Conditioning Layout — Roof Level (VRF Outdoor Units)", discipline: "Mechanical" },
+      { src: "gf-vnt.jpg", label: "Ventilation Layout — Ground Floor",      discipline: "Ventilation" },
+      { src: "l01-vnt.jpg", label: "Ventilation Layout — Level 01",         discipline: "Ventilation" },
+      { src: "l02-vnt.jpg", label: "Ventilation Layout — Level 02",         discipline: "Ventilation" },
+      { src: "l03-vnt.jpg", label: "Ventilation Layout — Level 03",         discipline: "Ventilation" },
+      { src: "l04-vnt.jpg", label: "Ventilation Layout — Level 04",         discipline: "Ventilation" },
+      { src: "rf-vnt.jpg", label: "Ventilation Layout — Roof Level",        discipline: "Ventilation" },
+    ],
+  },
+
   // ─── Add additional projects here as you share details ─────────────
   // Same shape as Quad Central above. For featured projects: include
   // `featured: true` and `slug: "<folder-name>"`. Photos / diagrams /
