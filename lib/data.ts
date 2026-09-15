@@ -240,6 +240,55 @@ export const projects: Project[] = [
   },
 
   {
+    name: "Lusail Plaza Towers",
+    location: "Lusail, Qatar",
+    sector: "Mixed-Use · Tower Development",
+    client: "Lusail Real Estate Development Co.",
+    consultant: "Foster + Partners",
+    role: "MEP BIM Modeler",
+    overview:
+      "Lusail Plaza Towers is a landmark twin-tower and podium development in Lusail, Qatar, designed by Foster + Partners for Lusail Real Estate Development Co. Work covered HVAC, chilled water, district cooling, sewer, and storm drainage networks across Plot 3 (BP12C) and Plot 4 (BP12D), delivered as Issued-for-Construction shop drawings under main contractor Hyundai Engineering & Construction.",
+    tools: ["Revit", "Navisworks", "AutoCAD"],
+    featured: true,
+    slug: "lusail-plaza",
+    photos: ["lusail-plaza-1.jpg", "lusail-plaza-3.jpg", "lusail-plaza-2.jpg", "lusail-plaza-4.jpg"],
+    diagrams: [
+      { src: "t3-l01-hvac-layout.jpg",          label: "Tower T3 — Level L01 HVAC Layout",              discipline: "Mechanical" },
+      { src: "t3-l01-chilled-water-layout.jpg", label: "Tower T3 — Level L01 Chilled Water Layout",     discipline: "Mechanical" },
+      { src: "district-cooling-layout-bp12d.jpg", label: "District Cooling Layout — Plot 4 (BP12D)",    discipline: "Mechanical" },
+      { src: "chilled-water-chamber-detail.jpg", label: "Chilled Water Chamber Detail",                 discipline: "Mechanical" },
+      { src: "sewer-network-bp12c.jpg",         label: "Sewer Network Layout — Plot 3 (BP12C)",         discipline: "Plumbing" },
+      { src: "storm-drainage-network-bp12d.jpg", label: "Storm & Surface Water Drainage — Plot 4 (BP12D)", discipline: "Plumbing" },
+      { src: "lusail-plumbing-isometric.jpg",   label: "Site Utility Piping — Isometric View",          discipline: "Plumbing" },
+    ],
+    coordination: [
+      {
+        src: "lusail-bim-1.jpg",
+        alt: "Lusail Plaza Towers — full massing BIM render of the twisted tower and podium",
+        caption: "Full massing render — twisted tower form and retail podium, coordinated as a single federated model.",
+      },
+      {
+        src: "lusail-bim-2.jpg",
+        alt: "Lusail Plaza Towers — twin-tower massing model with fan-shaped podium",
+        caption: "Twin-tower massing — Plot 3 and Plot 4 towers set within the shared podium footprint.",
+      },
+      {
+        src: "lusail-bim-3.jpg",
+        alt: "Lusail Plaza Towers — full MEP coordination model showing services throughout the tower and podium",
+        caption: "Full MEP coordination model — mechanical, plumbing, and electrical services routed through the tower core and podium levels.",
+      },
+    ],
+    responsibilities: [
+      "Modeled HVAC and chilled water distribution systems for Tower T3 typical and plant levels in Revit.",
+      "Modeled district cooling supply and return networks connecting the towers to the site energy centre.",
+      "Developed sewer and storm/surface water drainage networks across Plot 3 (BP12C) and Plot 4 (BP12D).",
+      "Coordinated MEP systems with architectural and structural models in a federated Navisworks environment.",
+      "Produced Issued-for-Construction shop drawings, chamber details, and schedules for site execution.",
+      "Worked within a multi-consultant delivery team alongside Foster + Partners, Louis Berger/OPM, and Hyundai E&C.",
+    ],
+  },
+
+  {
     name: "Gasan Mamo Insurance",
     location: "Qormi, Malta",
     sector: "Commercial",
@@ -494,55 +543,6 @@ export const projects: Project[] = [
         alt: "Geogreen Shield Refinery — close-up of process vessels and storage tanks",
         caption: "Process vessel row and bulk storage tanks — equipment layout coordinated for maintenance access and pipe routing.",
       },
-    ],
-  },
-
-  {
-    name: "Lusail Plaza Towers",
-    location: "Lusail, Qatar",
-    sector: "Mixed-Use · Tower Development",
-    client: "Lusail Real Estate Development Co.",
-    consultant: "Foster + Partners",
-    role: "MEP BIM Modeler",
-    overview:
-      "Lusail Plaza Towers is a landmark twin-tower and podium development in Lusail, Qatar, designed by Foster + Partners for Lusail Real Estate Development Co. Work covered HVAC, chilled water, district cooling, sewer, and storm drainage networks across Plot 3 (BP12C) and Plot 4 (BP12D), delivered as Issued-for-Construction shop drawings under main contractor Hyundai Engineering & Construction.",
-    tools: ["Revit", "Navisworks", "AutoCAD"],
-    featured: true,
-    slug: "lusail-plaza",
-    photos: ["lusail-plaza-1.jpg", "lusail-plaza-3.jpg", "lusail-plaza-2.jpg", "lusail-plaza-4.jpg"],
-    diagrams: [
-      { src: "t3-l01-hvac-layout.jpg",          label: "Tower T3 — Level L01 HVAC Layout",              discipline: "Mechanical" },
-      { src: "t3-l01-chilled-water-layout.jpg", label: "Tower T3 — Level L01 Chilled Water Layout",     discipline: "Mechanical" },
-      { src: "district-cooling-layout-bp12d.jpg", label: "District Cooling Layout — Plot 4 (BP12D)",    discipline: "Mechanical" },
-      { src: "chilled-water-chamber-detail.jpg", label: "Chilled Water Chamber Detail",                 discipline: "Mechanical" },
-      { src: "sewer-network-bp12c.jpg",         label: "Sewer Network Layout — Plot 3 (BP12C)",         discipline: "Plumbing" },
-      { src: "storm-drainage-network-bp12d.jpg", label: "Storm & Surface Water Drainage — Plot 4 (BP12D)", discipline: "Plumbing" },
-      { src: "lusail-plumbing-isometric.jpg",   label: "Site Utility Piping — Isometric View",          discipline: "Plumbing" },
-    ],
-    coordination: [
-      {
-        src: "lusail-bim-1.jpg",
-        alt: "Lusail Plaza Towers — full massing BIM render of the twisted tower and podium",
-        caption: "Full massing render — twisted tower form and retail podium, coordinated as a single federated model.",
-      },
-      {
-        src: "lusail-bim-2.jpg",
-        alt: "Lusail Plaza Towers — twin-tower massing model with fan-shaped podium",
-        caption: "Twin-tower massing — Plot 3 and Plot 4 towers set within the shared podium footprint.",
-      },
-      {
-        src: "lusail-bim-3.jpg",
-        alt: "Lusail Plaza Towers — full MEP coordination model showing services throughout the tower and podium",
-        caption: "Full MEP coordination model — mechanical, plumbing, and electrical services routed through the tower core and podium levels.",
-      },
-    ],
-    responsibilities: [
-      "Modeled HVAC and chilled water distribution systems for Tower T3 typical and plant levels in Revit.",
-      "Modeled district cooling supply and return networks connecting the towers to the site energy centre.",
-      "Developed sewer and storm/surface water drainage networks across Plot 3 (BP12C) and Plot 4 (BP12D).",
-      "Coordinated MEP systems with architectural and structural models in a federated Navisworks environment.",
-      "Produced Issued-for-Construction shop drawings, chamber details, and schedules for site execution.",
-      "Worked within a multi-consultant delivery team alongside Foster + Partners, Louis Berger/OPM, and Hyundai E&C.",
     ],
   },
 
