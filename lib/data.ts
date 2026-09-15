@@ -455,6 +455,48 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    name: "Geogreen Shield Refinery Expansion",
+    location: "Qatar",
+    sector: "Industrial · Oil & Gas",
+    client: "Geogreen Shield W.L.L.",
+    consultant: "Al-Sadd Consulting Engineering",
+    role: "MEP BIM Modeler",
+    overview:
+      "Geogreen Shield Refinery Expansion Project is an industrial refinery development in Qatar. Work covered detailed modeling and coordination of the pump area and tank farm piping networks, delivered as Issued-for-Construction drawings for contractor Steel Engineering Technology.",
+    tools: ["Revit", "Navisworks", "AutoCAD"],
+    featured: true,
+    slug: "geogreen",
+    photos: ["geogreen-1.jpg", "geogreen-2.jpg", "geogreen-3.jpg"],
+    diagrams: [
+      { src: "pump-area-piping.jpg",   label: "Pump Area Piping Layout",              discipline: "Mechanical" },
+      { src: "tank-farm-piping.jpg",   label: "Tank Farm Piping Layout (#150 Rating)", discipline: "Mechanical" },
+      { src: "piping-isometric-3d.jpg", label: "Piping Isometric — 3D Coordination View", discipline: "Mechanical" },
+    ],
+    coordination: [
+      {
+        src: "geogreen-bim-1.jpg",
+        alt: "Geogreen Shield Refinery — Revit/Navisworks 3D coordination overview with flare stack and process skids",
+        caption: "3D coordination overview — flare stack, boiler platform, and process vessel skids modeled together for clash-free installation.",
+      },
+      {
+        src: "geogreen-bim-2.jpg",
+        alt: "Geogreen Shield Refinery — 3D view of flare stack, boiler and piping runs",
+        caption: "Flare stack and boiler platform — interconnecting pipe runs routed and supported across the skid structure.",
+      },
+      {
+        src: "geogreen-bim-3.jpg",
+        alt: "Geogreen Shield Refinery — wide 3D view of the full process skid",
+        caption: "Full process skid — structural steelwork, vessels, and piping coordinated end-to-end.",
+      },
+      {
+        src: "geogreen-bim-4.jpg",
+        alt: "Geogreen Shield Refinery — close-up of process vessels and storage tanks",
+        caption: "Process vessel row and bulk storage tanks — equipment layout coordinated for maintenance access and pipe routing.",
+      },
+    ],
+  },
+
   // ─── Add additional projects here as you share details ─────────────
   // Same shape as Quad Central above. For featured projects: include
   // `featured: true` and `slug: "<folder-name>"`. Photos / diagrams /
