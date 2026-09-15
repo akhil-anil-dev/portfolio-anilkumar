@@ -509,7 +509,7 @@ export const projects: Project[] = [
     tools: ["Revit", "Navisworks", "AutoCAD"],
     featured: true,
     slug: "lusail-plaza",
-    photos: ["lusail-plaza-1.jpg", "lusail-plaza-2.jpg"],
+    photos: ["lusail-plaza-1.jpg", "lusail-plaza-3.jpg", "lusail-plaza-2.jpg", "lusail-plaza-4.jpg"],
     diagrams: [
       { src: "t3-l01-hvac-layout.jpg",          label: "Tower T3 — Level L01 HVAC Layout",              discipline: "Mechanical" },
       { src: "t3-l01-chilled-water-layout.jpg", label: "Tower T3 — Level L01 Chilled Water Layout",     discipline: "Mechanical" },
