@@ -546,6 +546,35 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    name: "Jewish Centre",
+    location: "Sliema, Malta",
+    sector: "Community · Mixed-Use",
+    role: "MEP BIM Coordinator",
+    overview:
+      "Multi-level community centre in Sliema, Malta, set within a traditional Maltese limestone townhouse. The building combines a restaurant and cafeteria at ground level with a synagogue, classrooms, library, multifunctional spaces and accommodation on the upper floors. MEP services — air conditioning, plumbing, drainage, fire detection and lighting — were modelled and coordinated within the tight, irregular footprint and heritage-fabric constraints of the site.",
+    tools: ["Revit", "AutoCAD"],
+    featured: true,
+    slug: "jewish-centre",
+    photos: ["jewish-centre-1.jpg", "jewish-centre-2.jpg"],
+    diagrams: [
+      { src: "l00-ac.jpg",             label: "Air Conditioning — Level 00",              discipline: "Mechanical" },
+      { src: "l00-plumbing.jpg",       label: "Plumbing — Level 00 (Under Floor & High Level)", discipline: "Plumbing" },
+      { src: "l00-drainage.jpg",       label: "Drainage — Level 00 (Under Floor & High Level)", discipline: "Plumbing" },
+      { src: "l00-fire-detection.jpg", label: "Fire Detection & Alarm — Level 00",        discipline: "Fire Fighting" },
+      { src: "l01-lighting.jpg",       label: "Lighting — Level 01 (Synagogue & Circulation)", discipline: "Electrical" },
+      { src: "l03-plumbing.jpg",       label: "Plumbing — Level 03 (Classrooms & Accommodation)", discipline: "Plumbing" },
+    ],
+    responsibilities: [
+      "Developed coordinated MEP BIM models across Level 00, Level 01 and Level 03 in Autodesk Revit.",
+      "Modelled VRF/split air-conditioning copper pipework, REFNET branches and condensate drainage routed within limited ceiling and floor voids.",
+      "Coordinated domestic cold, hot and second-class water, heat-pump supply, and under-floor and high-level drainage with sanitary fixtures.",
+      "Laid out fire detection and alarm devices, cabling routes and the control panel for the ground-floor restaurant, kitchen and circulation.",
+      "Produced lighting layouts, circuit and switching schedules and lighting-control-panel schematics for the synagogue and teaching spaces.",
+      "Issued shop drawings with sections, fixture details and pipe-length and fitting schedules for each discipline.",
+    ],
+  },
+
   // ─── Add additional projects here as you share details ─────────────
   // Same shape as Quad Central above. For featured projects: include
   // `featured: true` and `slug: "<folder-name>"`. Photos / diagrams /
